@@ -2,3 +2,4 @@
 db/
 simulation/
 *.cdf
+incremental_db/
