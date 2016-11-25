@@ -1,14 +1,14 @@
 //7 bit LFSR with polynomial: 1 + X + X^7
 module LFSR_7(clock, outnext);
 	input clock;
-	output [7:1] outnext;
-	reg [7:1] outputnext;
+	output [6:0] outnext;
+	reg [6:0] outnext;
 	
-	initial outputnext = 7'b1;
+	initial outnext = 7'b1;
 	
 	always @ (posedge clock)
 		begin
-		outputnext <= {outputnext[6:1], (outputnext[7] ^ outputnext[1])};
+		outnext <= {outnext[5:0], (outnext[6] ^ outnext[0])};
 		end
-	assign outnext = outputnext;
+
 endmodule
