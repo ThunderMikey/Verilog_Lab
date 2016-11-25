@@ -1,0 +1,8 @@
+//7 bit LFSR with polynomial: 1 + X + X^7
+module LFSR_7(KEY3, outnext);
+	input KEY3;
+	output [5:0] outtonext;
+	
+	always @(posedge KEY3)
+		outnext <= {outnext[5:0], (outnext[6] xor outnext[0])}
+		
