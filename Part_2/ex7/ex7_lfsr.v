@@ -8,7 +8,7 @@ module LFSR_7(clock, outnext);
 	
 	always @ (posedge clock)
 
-		outputnext <= {outputnext[6:0], (outputnext[6] ^ outputnext[0])};
+		outputnext <= {outputnext[6:1], (outputnext[6] ^ outputnext[0])};
 	
 	assign outnext = outputnext;
 endmodule
