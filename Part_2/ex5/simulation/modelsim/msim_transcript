@@ -1,0 +1,875 @@
+# Reading C:/altera/13.0sp1/modelsim_ase/tcl/vsim/pref.tcl 
+# Bad font spec for Editor textFont: t_fixed
+# do ex5_top_run_msim_rtl_verilog.do 
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Copying C:\altera\13.0sp1\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# ** Warning: Copied C:\altera\13.0sp1\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini.
+#          Updated modelsim.ini.
+# 
+# vlog -vlog01compat -work work +incdir+C:/Verilog_Lab/Part_2/ex5 {C:/Verilog_Lab/Part_2/ex5/counter_8.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module counter_8
+# 
+# Top level modules:
+# 	counter_8
+# 
+vsim -do ex5_top_run_msim_rtl_verilog.do -l msim_transcript -gui work.counter_8
+# vsim -do ex5_top_run_msim_rtl_verilog.do -l msim_transcript -gui work.counter_8 
+# Loading work.counter_8
+# do ex5_top_run_msim_rtl_verilog.do 
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Modifying modelsim.ini
+# 
+# vlog -vlog01compat -work work +incdir+C:/Verilog_Lab/Part_2/ex5 {C:/Verilog_Lab/Part_2/ex5/counter_8.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module counter_8
+# 
+# Top level modules:
+# 	counter_8
+# 
+add wave clock enable
+add wave -hexadecimal count
+force clock 0 0, 1 10ns -repeat 20ns
+force enable 1
+run 100s
+# Invalid time value: 100s
+run 100ns
+force enable 0
+run 100ns
+force enable 1
+run 1000ns
+restart
+# Loading work.counter_8
+do ./tb_counter.do
+restart
+do ./tb_counter.do
+restart
+do ./tb_counter.do
+restart
+do ./tb_counter.do
+step
+step
+step
+step
+step
+# Next activity is in 5 ns.
+# 
+# Next activity is in 10 ns.
+step
+step
+step
+step
+# Next activity is in 5 ns.
+# 
+# Next activity is in 10 ns.
+step
+step
+step
+restart
+do ./tb_counter.do
+step
+step
+step
+step
+restart
+step ./tb_counter.do
+# ** Error: (vsim-3176) Invalid step count './tb_counter.do'.
+# Usage: step [<n>] | -over [<n>] | -out | -inst <region> | -this <address> | -current
+step
+step
+step
+step
+step
+step
+do ./tb_counter.do
+restart
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step -over
+step -over
+step -out
+step -out
+step
+step -current
+step -over -current
+step -out -current
+step -current
+step
+step
+step
+step
+step
+step
+do ./tb_counter.do
+# Break in Module counter_8 at C:/Verilog_Lab/Part_2/ex5/counter_8.v line 13
+# Simulation Breakpoint: Break in Module counter_8 at C:/Verilog_Lab/Part_2/ex5/counter_8.v line 13
+# MACRO ././tb_counter.do PAUSED at line 5
+step
+step
+step
+step
+# Next activity is in 5 ns.
+# 
+# Next activity is in 10 ns.
+step
+step
+step
+step
+# Next activity is in 5 ns.
+# 
+# Next activity is in 10 ns.
+step
+step
+step
+step
+# Next activity is in 5 ns.
+# 
+# Next activity is in 10 ns.
+step -over
+step -over
+step -over
+step -over
+# Next activity is in 5 ns.
+# 
+# Next activity is in 10 ns.
+step -over
+step -over
+step -over
+step -over
+# Next activity is in 5 ns.
+# 
+# Next activity is in 10 ns.
+step -out
+# Break in Module counter_8 at C:/Verilog_Lab/Part_2/ex5/counter_8.v line 13
+step -out
+# Next activity is in 5 ns.
+# 
+# Next activity is in 10 ns.
+step -out
+# Break in Module counter_8 at C:/Verilog_Lab/Part_2/ex5/counter_8.v line 13
+step -out
+# Next activity is in 5 ns.
+# 
+# Next activity is in 10 ns.
+step -out
+# Break in Module counter_8 at C:/Verilog_Lab/Part_2/ex5/counter_8.v line 13
+step -out
+# Next activity is in 5 ns.
+# 
+# Next activity is in 10 ns.
+step -out
+# Break in Module counter_8 at C:/Verilog_Lab/Part_2/ex5/counter_8.v line 13
+step -out
+# Next activity is in 5 ns.
+# 
+# Next activity is in 10 ns.
+step -out
+# Break in Module counter_8 at C:/Verilog_Lab/Part_2/ex5/counter_8.v line 13
+step -out
+# Next activity is in 5 ns.
+# 
+# Next activity is in 10 ns.
+step -out
+# Break in Module counter_8 at C:/Verilog_Lab/Part_2/ex5/counter_8.v line 13
+step -out
+# Next activity is in 5 ns.
+# 
+# Next activity is in 10 ns.
+step -out
+# Break in Module counter_8 at C:/Verilog_Lab/Part_2/ex5/counter_8.v line 13
+step -out
+# Next activity is in 5 ns.
+# 
+# Next activity is in 10 ns.
+step -out
+# Break in Module counter_8 at C:/Verilog_Lab/Part_2/ex5/counter_8.v line 13
+step -out
+# Next activity is in 5 ns.
+# 
+# Next activity is in 10 ns.
+step
+step
+step
+step
+# Next activity is in 5 ns.
+# 
+# Next activity is in 10 ns.
+step
+step
+step
+step
+# Next activity is in 5 ns.
+# 
+# Next activity is in 10 ns.
+step
+step
+step
+step
+# Next activity is in 5 ns.
+# 
+# Next activity is in 10 ns.
+step
+step
+step
+step
+# Next activity is in 5 ns.
+# 
+# Next activity is in 10 ns.
+step
+step
+step
+step
+# Next activity is in 5 ns.
+# 
+# Next activity is in 10 ns.
+step
+step
+step
+step
+# Next activity is in 5 ns.
+# 
+# Next activity is in 10 ns.
+step
+step
+step
+step
+# Next activity is in 5 ns.
+# 
+# Next activity is in 10 ns.
+step
+step
+step
+step
+# Next activity is in 5 ns.
+# 
+# Next activity is in 10 ns.
+step
+step
+step
+step
+# Next activity is in 5 ns.
+# 
+# Next activity is in 10 ns.
+step
+step
+step
+step
+# Next activity is in 5 ns.
+# 
+# Next activity is in 10 ns.
+step
+step
+step
+step
+# Next activity is in 5 ns.
+# 
+# Next activity is in 10 ns.
+step
+step
+step
+step
+# Next activity is in 5 ns.
+# 
+# Next activity is in 10 ns.
+step
+step
+step
+step
+# Next activity is in 5 ns.
+# 
+# Next activity is in 10 ns.
+step
+step
+step
+step
+# Next activity is in 5 ns.
+# 
+# Next activity is in 10 ns.
+step
+step
+step
+step
+# Next activity is in 5 ns.
+# 
+# Next activity is in 10 ns.
+step
+step
+step
+step
+# Next activity is in 5 ns.
+# 
+# Next activity is in 10 ns.
+step
+step
+step
+step
+# Next activity is in 5 ns.
+# 
+# Next activity is in 10 ns.
+step
+step
+step
+step
+# Next activity is in 5 ns.
+# 
+# Next activity is in 10 ns.
+step
+step
+step
+step
+# Next activity is in 5 ns.
+# 
+# Next activity is in 10 ns.
+step
+step
+step
+step
+# Next activity is in 5 ns.
+# 
+# Next activity is in 10 ns.
+step
+step
+step
+step
+# Next activity is in 5 ns.
+# 
+# Next activity is in 10 ns.
+step
+step
+step
+step
+# Next activity is in 5 ns.
+# 
+# Next activity is in 10 ns.
+step
+step
+step
+step
+# Next activity is in 5 ns.
+# 
+# Next activity is in 10 ns.
+step
+step
+step
+step
+# Next activity is in 5 ns.
+# 
+# Next activity is in 10 ns.
+step
+step
+step
+step
+# Next activity is in 5 ns.
+# 
+# Next activity is in 10 ns.
+step
+step
+step
+step
+# Next activity is in 5 ns.
+# 
+# Next activity is in 10 ns.
+step
+step
+step
+step
+# Next activity is in 5 ns.
+# 
+# Next activity is in 10 ns.
+step
+step
+step
+step
+# Next activity is in 5 ns.
+# 
+# Next activity is in 10 ns.
+step
+step
+step
+step
+# Next activity is in 5 ns.
+# 
+# Next activity is in 10 ns.
+do ./tb_counter.do
+# ** Error: (vish-4014) No objects found matching 'clock'.
+# (vish-4014) No objects found matching 'enable'.
+# Error in macro ././tb_counter.do line 1
+# (vish-4014) No objects found matching 'clock'.
+# (vish-4014) No objects found matching 'enable'.
+#     while executing
+# "add wave clock enable"
+restart
+do ./tb_counter.do
+# Break in Module counter_8 at C:/Verilog_Lab/Part_2/ex5/counter_8.v line 13
+# Simulation Breakpoint: Break in Module counter_8 at C:/Verilog_Lab/Part_2/ex5/counter_8.v line 13
+# MACRO ././tb_counter.do PAUSED at line 5
+restart
+do ./tb_counter.do
+clear
+# invalid command name "clear"
+restart
+step
+restart
+step
+step ./tb_counter.do
+# ** Error: (vsim-3176) Invalid step count './tb_counter.do'.
+# Usage: step [<n>] | -over [<n>] | -out | -inst <region> | -this <address> | -current
+step
+step
+restart
+do ./tb_counter.do -step
+restart
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+do ./tb_counter.do -step
+do ./tb_counter.do
+do ./tb_counter.do
+# Break in Module counter_8 at C:/Verilog_Lab/Part_2/ex5/counter_8.v line 13
+# Simulation Breakpoint: Break in Module counter_8 at C:/Verilog_Lab/Part_2/ex5/counter_8.v line 13
+# MACRO ././tb_counter.do PAUSED at line 5
+restart
+do ./tb_counter.do
+# Break in Module counter_8 at C:/Verilog_Lab/Part_2/ex5/counter_8.v line 13
+# Simulation Breakpoint: Break in Module counter_8 at C:/Verilog_Lab/Part_2/ex5/counter_8.v line 13
+# MACRO ././tb_counter.do PAUSED at line 5
+step
+step
+step
+step
+# Next activity is in 5 ns.
+# 
+# Next activity is in 10 ns.
+step
+step
+step
+step
+# Next activity is in 5 ns.
+# 
+# Next activity is in 10 ns.
+step
+step
+step
+step
+# Next activity is in 5 ns.
+# 
+# Next activity is in 10 ns.
+step
+step
+step
+step
+# Next activity is in 5 ns.
+# 
+# Next activity is in 10 ns.
+step
+step
+step
+step
+# Next activity is in 5 ns.
+# 
+# Next activity is in 10 ns.
+step
+step
+step
+step
+# Next activity is in 5 ns.
+# 
+# Next activity is in 10 ns.
+step
+step
+step
+step
+# Next activity is in 5 ns.
+# 
+# Next activity is in 10 ns.
+step
+step
+step
+step
+# Next activity is in 5 ns.
+# 
+# Next activity is in 10 ns.
+step
+step
+step
+step
+# Next activity is in 5 ns.
+# 
+# Next activity is in 10 ns.
+step
+step
+step
+step
+# Next activity is in 5 ns.
+# 
+# Next activity is in 10 ns.
+step
+step
+step
+step
+# Next activity is in 5 ns.
+# 
+# Next activity is in 10 ns.
+step
+step
+step
+step
+# Next activity is in 5 ns.
+# 
+# Next activity is in 10 ns.
+step
+step
+step
+step
+# Next activity is in 5 ns.
+# 
+# Next activity is in 5 ns.
+# 
+# Next activity is in 5 ns.
+step
+step
+step
+step
+# Next activity is in 5 ns.
+# 
+# Next activity is in 10 ns.
+step
+step
+step
+step
+# Next activity is in 5 ns.
+# 
+# Next activity is in 10 ns.
+step
+step
+step
+step
+# Next activity is in 5 ns.
+# 
+# Next activity is in 10 ns.
+step
+step
+step
+step
+# Next activity is in 5 ns.
+# 
+# Next activity is in 10 ns.
+step
+step
+step
+step
+# Next activity is in 5 ns.
+# 
+# Next activity is in 10 ns.
+step
+step
+restart
+do ./tb_counter.do
+step
+step
+# Next activity is in 10 ns.
+step
+step
+step
+# Next activity is in 5 ns.
+step
+# Next activity is in 10 ns.
+step
+step
+step
+step
+# Next activity is in 5 ns.
+step
+# Next activity is in 10 ns.
+step
+step
+step
+step
+# Next activity is in 5 ns.
+step
+# Next activity is in 10 ns.
+step
+step
+step
+step
+# Next activity is in 5 ns.
+step
+# Next activity is in 10 ns.
+step
+step
+step
+step
+# Next activity is in 5 ns.
+step
+# Next activity is in 10 ns.
+step
+step
+step
+step
+# Next activity is in 5 ns.
+step
+# Next activity is in 10 ns.
+step
+step
+step
+step
+# Next activity is in 5 ns.
+step
+# Next activity is in 10 ns.
+step
+step
+step
+step
+# Next activity is in 5 ns.
+step
+# Next activity is in 10 ns.
+step
+step
+step
+step
+# Next activity is in 5 ns.
+step
+# Next activity is in 10 ns.
+step
+step
+step
+step
+# Next activity is in 5 ns.
+step
+# Next activity is in 10 ns.
+step
+step
+step
+step
+# Next activity is in 5 ns.
+step
+# Next activity is in 10 ns.
+step
+step
+step
+step
+# Next activity is in 5 ns.
+step
+# Next activity is in 10 ns.
+step
+step
+step
+step
+# Next activity is in 5 ns.
+step
+# Next activity is in 5 ns.
+step
+# Next activity is in 5 ns.
+step
+step
+restart
+do ./tb_counter.do
+step
+step
+# Next activity is in 10 ns.
+step
+step
+step
+# Next activity is in 5 ns.
+step
+# Next activity is in 10 ns.
+step
+step
+step
+step
+# Next activity is in 5 ns.
+step
+# Next activity is in 10 ns.
+step
+step
+step
+step
+# Next activity is in 5 ns.
+step
+# Next activity is in 10 ns.
+step
+step
+step
+step
+# Next activity is in 5 ns.
+step
+# Next activity is in 10 ns.
+step
+step
+step
+step
+# Next activity is in 5 ns.
+step
+# Next activity is in 10 ns.
+step
+step
+step
+step
+# Next activity is in 5 ns.
+step
+# Next activity is in 10 ns.
+step
+step
+step
+step
+# Next activity is in 5 ns.
+step
+# Next activity is in 10 ns.
+step
+step
+step
+restart
+do ./tb_counter.do
+step
+step
+# Next activity is in 10 ns.
+step
+step
+step
+# Next activity is in 5 ns.
+step
+# Next activity is in 10 ns.
+step
+step
+step
+step
+# Next activity is in 5 ns.
+step
+# Next activity is in 10 ns.
+step
+step
+step
+step
+# Next activity is in 5 ns.
+step
+# Next activity is in 10 ns.
+step
+step
+step
+step
+# Next activity is in 5 ns.
+step
+# Next activity is in 10 ns.
+step
+step
+step
+step
+# Next activity is in 5 ns.
+step
+# Next activity is in 10 ns.
+step
+step
+step
+step
+# Next activity is in 5 ns.
+step
+# Next activity is in 10 ns.
+step
+step
+step
+step
+step
+# Next activity is in 5 ns.
+# 
+# Next activity is in 10 ns.
+step
+step
+step
+step
+# Next activity is in 5 ns.
+# 
+# Next activity is in 10 ns.
+step
+step
+step
+step
+# Next activity is in 5 ns.
+# 
+# Next activity is in 10 ns.
+step
+step
+step
+step
+# Next activity is in 5 ns.
+# 
+# Next activity is in 10 ns.
+step
+step
+step
+step
+# Next activity is in 5 ns.
+# 
+# Next activity is in 10 ns.
+step
+step
+step
+step
+# Next activity is in 5 ns.
+# 
+# Next activity is in 10 ns.
+step
+step
+step
+step
+# Next activity is in 5 ns.
+# 
+# Next activity is in 5 ns.
+# 
+# Next activity is in 5 ns.
+step
+step
+step
+# Next activity is in 5 ns.
+step
+# Next activity is in 10 ns.
+step
+step
+step
+step
+# Next activity is in 5 ns.
+step
+# Next activity is in 10 ns.
+step
+step
+step
+run
+run
+run
+run
+run
+run
+run
+run -continue
+run -continue
+run -all

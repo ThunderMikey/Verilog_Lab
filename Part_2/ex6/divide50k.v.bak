@@ -1,0 +1,11 @@
+module divide50k(CLK, tick);
+	input CLK;
+	output tick;
+	reg reset;
+	
+	initial reset = 1;
+	
+	counter_16 counter_16_outtick(CLK, 1'b0, reset, count);
+	
+	always @ (posedge CLK)
+		if()

@@ -1,0 +1,25 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\Verilog_Lab\Part_2\ex5\simulation\modelsim
+vcounter_8
+!i10b 1
+!s100 A><6XHVI3[@ooA9a8]Xzj2
+IYGoU2BzzZMnCk]>j^LPDH1
+Vdn7aTnOzPKdeZA;zmQ`Cl3
+Z1 dC:\Verilog_Lab\Part_2\ex5\simulation\modelsim
+w1480065564
+8C:/Verilog_Lab/Part_2/ex5/counter_8.v
+FC:/Verilog_Lab/Part_2/ex5/counter_8.v
+L0 2
+OV;L;10.1d;51
+r1
+!s85 0
+31
+!s108 1480065923.338000
+!s107 C:/Verilog_Lab/Part_2/ex5/counter_8.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Verilog_Lab/Part_2/ex5|C:/Verilog_Lab/Part_2/ex5/counter_8.v|
+!s101 -O0
+o-vlog01compat -work work -O0
+!s92 -vlog01compat -work work +incdir+C:/Verilog_Lab/Part_2/ex5 -O0
