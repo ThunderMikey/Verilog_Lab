@@ -9,7 +9,7 @@ module divide50k(CLK, tick);
 	reg [15:0] count;
 	reg tick;
 	always @ (posedge CLK)
-		if(count==1'b0)
+		if(count==16'b0)
 		begin
 			tick<=1'b1;
 			count<=N;
