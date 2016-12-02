@@ -1,0 +1,33 @@
+//state 0, time_passed=0;
+//state 1, time_passed++;
+//state 2, time_passed hold;
+module timer_16 (clk, start, stop, reset, time_passed);
+	input clk, start, stop, reset;
+	output reg [15:0] time_passed;
+	
+	reg [1:0] state; //count & ~count states
+	initial state=2'b0;
+	always @ (posedge clk) begin
+		if(start==1'b1) begin
+			state<=2'b01;
+		end
+		if(stop==1'b1) begin
+			state<=2'b10;
+		end
+		if(reset==1'b1) begin
+			state<=1'b0;
+		end
+	end
+	
+	
+	always @ (posedge clk) begin
+		case (state)
+			2'b00:	time_passed<=0;
+			2'b01:	time_passed<=time_passed+1'b1;
+			2'b10:	;
+			
+			default: ;
+		endcase
+	end
+	
+endmodule
