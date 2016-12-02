@@ -1,0 +1,81 @@
+# Reading C:/altera/13.0sp1/modelsim_ase/tcl/vsim/pref.tcl 
+# do ex_10_top_run_msim_rtl_verilog.do 
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Copying C:\altera\13.0sp1\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# ** Warning: Copied C:\altera\13.0sp1\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini.
+#          Updated modelsim.ini.
+# 
+# vlog -vlog01compat -work work +incdir+C:/Verilog_Lab/part_3/ex10 {C:/Verilog_Lab/part_3/ex10/spi2dac.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module spi2dac
+# 
+# Top level modules:
+# 	spi2dac
+# 
+vsim work.spi2dac
+# vsim work.spi2dac 
+# Loading work.spi2dac
+do ./tb_spi2dac.do
+# ** Error: (vish-4014) No objects found matching 'sysclk'.
+# Error in macro ././tb_spi2dac.do line 1
+# (vish-4014) No objects found matching 'sysclk'.
+#     while executing
+# "add wave -position end  sysclk"
+do ./tb_spi2dac.do
+# ** Error: (vish-4014) No objects found matching 'sysclk'.
+# Error in macro ././tb_spi2dac.do line 1
+# (vish-4014) No objects found matching 'sysclk'.
+#     while executing
+# "add wave -position end  sysclk"
+do ./tb_spi2dac.do
+# ** Error: (vish-4014) No objects found matching 'sysclk'.
+# Error in macro ././tb_spi2dac.do line 1
+# (vish-4014) No objects found matching 'sysclk'.
+#     while executing
+# "add wave -position end  sysclk"
+add wave -position end -hexadecimal data_in
+# (vish-4014) No objects found matching 'data_in'.
+add wave -position end  sim:/spi2dac/sysclk
+pwd
+# C:/Verilog_Lab/part_3/ex10/simulation/modelsim
+cd spi2dac
+# Cannot change directory while a simulation is in progress.
+# Use the "quit -sim" command to unload the design first.
+add wave -position end  sim:/spi2dac/data_in
+add wave -position end  sim:/spi2dac/load
+add wave -position end  sim:/spi2dac/sysclk
+add wave -position end  sim:/spi2dac/dac_cs
+add wave -position end  sim:/spi2dac/dac_ld
+add wave -position end  sim:/spi2dac/dac_sck
+add wave -position end  sim:/spi2dac/dac_sdi
+force sysclk 1 0, 0 10ns -r 20ns
+# ** Error: (vish-4008) Object 'sysclk' not found.
+# 
+force data_in 10'h23b
+# ** Error: (vish-4008) Object 'data_in' not found.
+# 
+force load 0
+# ** Error: (vish-4008) Object 'load' not found.
+# 
+run 200ns
+force load 1
+restart
+force load 0 0, 1 20ns
+force sysclk 1 0, 0 10ns -r 20ns
+force data_in 10'h23b
+run 200ns
+restart
+force load 1 0, 0 20ns
+run 200ns
+restart
+force sysclk 1 0, 0 10ns -r 20ns
+force data_in 10'h23b
+force load 1 0, 0 20ns
+run 200ns
+run 20us
+run 20us

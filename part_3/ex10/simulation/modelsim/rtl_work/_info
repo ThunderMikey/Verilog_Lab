@@ -1,0 +1,25 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\Verilog_Lab\part_3\ex10\simulation\modelsim
+vspi2dac
+!i10b 1
+!s100 ;5?E^LbY6m124;Z@I<iR=3
+I5gMZ6SPTf7EI_keVNVQmn3
+VFNOGDa=aYhJTn=76LYB@A2
+Z1 dC:\Verilog_Lab\part_3\ex10\simulation\modelsim
+w1478805578
+8C:/Verilog_Lab/part_3/ex10/spi2dac.v
+FC:/Verilog_Lab/part_3/ex10/spi2dac.v
+L0 9
+OV;L;10.1d;51
+r1
+!s85 0
+31
+!s108 1480673179.493000
+!s107 C:/Verilog_Lab/part_3/ex10/spi2dac.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Verilog_Lab/part_3/ex10|C:/Verilog_Lab/part_3/ex10/spi2dac.v|
+!s101 -O0
+o-vlog01compat -work work -O0
+!s92 -vlog01compat -work work +incdir+C:/Verilog_Lab/part_3/ex10 -O0

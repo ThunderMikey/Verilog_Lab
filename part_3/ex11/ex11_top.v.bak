@@ -1,0 +1,4 @@
+module ex11(SW, LOAD, CLOCK_50, pwm_out);
+	input [9:0] SW;
+	input LOAD;
+	input CLOCK_50;

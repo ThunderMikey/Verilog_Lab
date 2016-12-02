@@ -1,0 +1,7 @@
+module ex10_top(SW, CLOCK_50, DAC_CS);
+	input [9:0] SW;
+	output [3:0] DAC_CS;
+	
+	wire tick_out;
+
+	divide5k clktick_16(CLOCK_50, tick_out);
