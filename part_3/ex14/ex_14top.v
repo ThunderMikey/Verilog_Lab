@@ -32,7 +32,7 @@ module ex_14top(SW, CLOCK_50, DAC_CS, DAC_SDI, DAC_LD, DAC_SCK, PWM_OUT, HEX0, H
 	
 	// outputting the decimal value to the 7-seg displays
 	const_mult mult(SW, out_mult);
-	bin2bcd_16 mult_to_bcd(out_mult[23:14], bcd_seg0, bcd_seg1, bcd_seg2, bcd_seg3, bcd_seg4);
+	bin2bcd_16 mult_to_bcd(out_mult[23:10], bcd_seg0, bcd_seg1, bcd_seg2, bcd_seg3, bcd_seg4);
 	hex_to_7seg hex0(bcd_seg0, HEX0);
 	hex_to_7seg hex1(bcd_seg1, HEX1);
 	hex_to_7seg hex2(bcd_seg2, HEX2);
