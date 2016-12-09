@@ -1,0 +1,18 @@
+module echo (sysclk, sample_f, data_in, data_out);
+	input sysclk, sample_f;
+	input [9:0] data_in;
+	output [9:0] data_out;
+	
+	wire rdreq, wrreq, full;
+	wire [9:0] to_mult;
+	wire [9:0] to_add;
+	
+	fifo_10bit fifo_10bit_block(
+	.clock(sample_f),
+	.data(data_in),
+	.rdreq(rdreq),
+	.wrreq(wrreq),
+	.full(full),
+	.q(data_out));
+	
+	multiply_half multiply_half_block (.sysclk(CLOCK_50), data_out, data_out);
