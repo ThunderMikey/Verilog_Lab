@@ -6,7 +6,6 @@ module echo_back (sysclk, data_valid, data_in, data_out);
 	wire wrreq, rdreq, full;
 	wire [9:0] to_mult;
 	reg [9:0] to_add;
-	// reg [9:0] to_add;
 	wire [9:0] result;
 	wire [9:0] x;
 	reg [9:0] y;

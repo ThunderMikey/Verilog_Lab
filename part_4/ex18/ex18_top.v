@@ -39,7 +39,7 @@ module ex18_top (CLOCK_50, SW, HEX0, HEX1, HEX2,
 		.sdata_from_adc (ADC_SDO));		
 					
 	
-	echo echo_block (.sysclk(CLOCK_50), .data_valid(data_valid), .data_in(data_in), .data_out(data_out));
+	echo_back echo_back_block (.sysclk(CLOCK_50), .data_valid(data_valid), .data_in(data_in), .data_out(data_out));
 	
 	
 	

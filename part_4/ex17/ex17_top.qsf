@@ -264,7 +264,6 @@ set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SW[9]
 # End of pin and io_standard assignments
 #============================================================
 set_global_assignment -name VERILOG_FILE pulse_gen.v
-set_global_assignment -name VERILOG_FILE multiply_half.v
 set_global_assignment -name VERILOG_FILE spi2dac.v
 set_global_assignment -name VERILOG_FILE spi2adc.v
 set_global_assignment -name VERILOG_FILE pwm.v
