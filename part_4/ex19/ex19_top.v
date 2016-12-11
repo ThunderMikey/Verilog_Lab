@@ -50,7 +50,7 @@ module ex19_top (CLOCK_50, SW, HEX0, HEX1, HEX2,
 	
 	// output the switch delay to the 7-segment displays
 	output_sw show_delay(
-	.SW(SW[8:0]), 
+	.SW(SW[8:0]),  
 	.bcd0(bcd_wire0), 
 	.bcd1(bcd_wire1), 
 	.bcd2(bcd_wire2));
