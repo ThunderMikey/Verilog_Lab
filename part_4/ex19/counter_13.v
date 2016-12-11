@@ -1,5 +1,5 @@
-
-module counter_10 (clock, enable, reset, count);
+                                
+module counter_13 (clock, enable, reset, count);
 
 parameter BIT_SZ = 13;
 input clock;

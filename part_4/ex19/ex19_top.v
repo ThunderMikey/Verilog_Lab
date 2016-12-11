@@ -1,4 +1,4 @@
-module ex18_top (CLOCK_50, SW, HEX0, HEX1, HEX2, 
+module ex19_top (CLOCK_50, SW, HEX0, HEX1, HEX2, 
 					DAC_SDI, DAC_SCK, DAC_CS, DAC_LD,
 					ADC_SDI, ADC_SCK, ADC_CS, ADC_SDO, PWM_OUT);
 					
@@ -22,6 +22,8 @@ module ex18_top (CLOCK_50, SW, HEX0, HEX1, HEX2,
 	wire			DAC_SCK, ADC_SCK;
 	wire			full;
 	
+	wire [3:0] 	bcd_wire0, bcd_wire1, bcd_wire2; 
+	
 	clktick_16  GEN_10K (CLOCK_50, 1'b1, 16'd4999, tick_10k);  	// generate 10KHz sampling clock ticks
 	spi2dac SPI_DAC (CLOCK_50, data_out, tick_10k, 		// send processed sample to DAC
 					DAC_SDI, DAC_CS, DAC_SCK, DAC_LD);		// order of signals matter
@@ -40,7 +42,7 @@ module ex18_top (CLOCK_50, SW, HEX0, HEX1, HEX2,
 					
 	// multiple echo block
 	echo_back echo_back_block (
-	.switches(SW),
+	.switches(SW[8:0]),
 	.sysclk(CLOCK_50), 
 	.data_valid(data_valid), 
 	.data_in(data_in), 
@@ -48,9 +50,13 @@ module ex18_top (CLOCK_50, SW, HEX0, HEX1, HEX2,
 	
 	// output the switch delay to the 7-segment displays
 	output_sw show_delay(
-	.SW(SW), 
-	.HEX0(HEX0), 
-	.HEX1(HEX1), 
-	.HEX2(HEX2));
+	.SW(SW[8:0]), 
+	.bcd0(bcd_wire0), 
+	.bcd1(bcd_wire1), 
+	.bcd2(bcd_wire2));
+	
+	hex_to_7seg		SEG0 (HEX0, bcd_wire0);			
+	hex_to_7seg		SEG1 (HEX1, bcd_wire1);			
+	hex_to_7seg		SEG2 (HEX2, bcd_wire2);
 	
 endmodule
