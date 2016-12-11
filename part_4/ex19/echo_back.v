@@ -14,9 +14,7 @@ module echo_back (switches, sysclk, data_valid, data_in, data_out);
 	reg [12:0] added_addrs;
 	
 	reg [8:0] to_add;
-	
 	reg [9:0] y;
-	reg ff_full;
 	
 	parameter ADC_OFFSET = 10'h181;
 	parameter DAC_OFFSET = 10'h200;
@@ -24,7 +22,10 @@ module echo_back (switches, sysclk, data_valid, data_in, data_out);
 	// ADC offset correction
 	assign x = data_in - ADC_OFFSET;
 	
-	pulse_gen pulse_gen_block (.pulse(enable), .in(data_valid), .clk(sysclk));
+	pulse_gen pulse_gen_block (
+	.pulse(enable), 
+	.in(data_valid), 
+	.clk(sysclk));
 	
 	// multiply by 0.5
 	always @ (posedge sysclk) begin
@@ -34,9 +35,8 @@ module echo_back (switches, sysclk, data_valid, data_in, data_out);
 	// subtract result from input - this may prove an issue if
 	// the result does have to explictly sign extended
 	always @ (posedge sysclk) begin
-		y <= x - to_add;
+		y <= x - {to_add[8], to_add};
 	end
-	
 	
 	// DAC offset correction
 	always @ (posedge sysclk) begin
@@ -44,12 +44,12 @@ module echo_back (switches, sysclk, data_valid, data_in, data_out);
 	end
 	
 	always @ (posedge sysclk) begin
-		added_addrs <= switches + addrs_count_val;
+		added_addrs <= {switches, 4'b0} + addrs_count_val;
 	end
 	
 	// 13 bit counter
 	counter_13 addr_counter(
-	.clock(~wrreq), 
+	.clock(~data_valid), 
 	.enable(1'b1), 
 	.reset(1'b0), 
 	.count(addrs_count_val));
