@@ -1,7 +1,7 @@
-module const_mult_out(SW, HEX0, HEX1, HEX2, HEX3, HEX4);
+module output_sw(SW, HEX0, HEX1, HEX2);
 
 	input [8:0] SW;
-	output [6:0] HEX0, HEX1, HEX2, HEX3, HEX4;
+	output [6:0] HEX0, HEX1, HEX2;
 	
 	wire [19:0] result_out;
 	wire [3:0] bcd_res0, bcd_res1, bcd_res2, bcd_res3, bcd_res4;
@@ -16,12 +16,9 @@ module const_mult_out(SW, HEX0, HEX1, HEX2, HEX3, HEX4);
 	.BCD3(bcd_res3),
 	.BCD4(bcd_res4));
 	
-	hex_to_7seg hexd0(.out(HEX0));
-	hex_to_7seg hexd1(.out(HEX1));
-	hex_to_7seg hexd2(.out(HEX2));
-	hex_to_7seg hexd3(.out(HEX3));
-	hex_to_7seg hexd4(.out(HEX4));
+	hex_to_7seg hexd0(.out(HEX0), .in(bcd_res0));
+	hex_to_7seg hexd1(.out(HEX1), .in(bcd_res1));
+	hex_to_7seg hexd2(.out(HEX2), .in(bcd_res2));
 	
-
-
+	
 endmodule
