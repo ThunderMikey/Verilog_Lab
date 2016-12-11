@@ -44,7 +44,7 @@ module ex15_top (CLOCK_50, SW, HEX0, HEX1, HEX2,
 	spi2adc poten_spi_adc(
 	.sysclk(CLOCK_50), 
 	.start(divclk), 
-	.channel(1'b1), 
+	.channel(1'b0), 
 	.data_from_adc(data_in), 
 	.data_valid(data_valid), 
 	.sdata_to_adc(ADC_SDI), 
