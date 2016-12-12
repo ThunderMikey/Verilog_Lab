@@ -1,5 +1,5 @@
 Fitter report for ex_10_top
-Fri Dec 02 12:06:57 2016
+Mon Dec 12 13:42:19 2016
 Quartus Prime Version 16.0.0 Build 211 04/27/2016 SJ Standard Edition
 
 
@@ -64,7 +64,7 @@ agreement for further details.
 +-----------------------------------------------------------------------------------+
 ; Fitter Summary                                                                    ;
 +---------------------------------+-------------------------------------------------+
-; Fitter Status                   ; Successful - Fri Dec 02 12:06:57 2016           ;
+; Fitter Status                   ; Successful - Mon Dec 12 13:42:19 2016           ;
 ; Quartus Prime Version           ; 16.0.0 Build 211 04/27/2016 SJ Standard Edition ;
 ; Revision Name                   ; ex_10_top                                       ;
 ; Top-level Entity Name           ; ex10_top                                        ;
@@ -159,7 +159,7 @@ agreement for further details.
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   0.3%      ;
+;     Processor 2            ;   0.4%      ;
 ;     Processor 3            ;   0.3%      ;
 ;     Processor 4            ;   0.3%      ;
 +----------------------------+-------------+
@@ -1978,19 +1978,19 @@ Info (170195): Router estimated average interconnect usage is 0% of the availabl
 Info (188005): Design requires adding a large amount of routing delay for some signals to meet hold time requirements, and there is an excessive demand for the available routing resources. The Fitter is reducing the routing delays of some signals to help the routing algorithm converge, but doing so may cause hold time failures. For more information, refer to the "Estimated Delay Added for Hold Timing" section in the Fitter report.
 Info (170199): The Fitter performed an Auto Fit compilation.  Optimizations were skipped to reduce compilation time.
     Info (170201): Optimizations that may affect the design's routability were skipped
-Info (170194): Fitter routing operations ending: elapsed time is 00:00:04
+Info (170194): Fitter routing operations ending: elapsed time is 00:00:03
 Info (11888): Total time spent on timing analysis during the Fitter is 0.27 seconds.
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
-Info (11801): Fitter post-fit operations ending: elapsed time is 00:00:03
+Info (11801): Fitter post-fit operations ending: elapsed time is 00:00:02
 Warning (171167): Found invalid Fitter assignments. See the Ignored Assignments panel in the Fitter Compilation Report for more information.
 Info (144001): Generated suppressed messages file C:/Verilog_Lab/part_3/ex10/output_files/ex_10_top.fit.smsg
 Info: Quartus Prime Fitter was successful. 0 errors, 71 warnings
-    Info: Peak virtual memory: 2569 megabytes
-    Info: Processing ended: Fri Dec 02 12:06:58 2016
-    Info: Elapsed time: 00:00:34
+    Info: Peak virtual memory: 2554 megabytes
+    Info: Processing ended: Mon Dec 12 13:42:19 2016
+    Info: Elapsed time: 00:00:33
     Info: Total CPU time (on all processors): 00:00:58
 
 
