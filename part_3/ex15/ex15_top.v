@@ -37,7 +37,7 @@ module ex15_top (CLOCK_50, SW, HEX0, HEX1, HEX2,
 	
 	// outputting to the board
 	
-	addprev_addr_w_sw adder(data_in, addr_loop);
+	addprev_addr_w_sw adder(data_in, addr_loop, addr_result);
 	addr_reg address_reg(divclk, addr_result, addr_loop);
 	ROM datarom(addr_loop, divclk, data_out);
 	

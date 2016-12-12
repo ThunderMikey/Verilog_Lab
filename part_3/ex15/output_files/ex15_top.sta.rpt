@@ -1,5 +1,5 @@
 TimeQuest Timing Analyzer report for ex15_top
-Mon Dec 12 10:14:35 2016
+Mon Dec 12 11:53:22 2016
 Quartus Prime Version 16.0.0 Build 211 04/27/2016 SJ Standard Edition
 
 
@@ -105,9 +105,9 @@ agreement for further details.
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   3.7%      ;
-;     Processor 3            ;   3.6%      ;
-;     Processor 4            ;   3.6%      ;
+;     Processor 2            ;   3.9%      ;
+;     Processor 3            ;   3.8%      ;
+;     Processor 4            ;   3.7%      ;
 +----------------------------+-------------+
 
 
@@ -126,8 +126,8 @@ agreement for further details.
 +------------+-----------------+-----------------------+------------------------------------------------+
 ; Fmax       ; Restricted Fmax ; Clock Name            ; Note                                           ;
 +------------+-----------------+-----------------------+------------------------------------------------+
-; 280.58 MHz ; 280.58 MHz      ; CLOCK_50              ;                                                ;
-; 431.97 MHz ; 315.06 MHz      ; divide5k:divide5|tick ; limit due to minimum period restriction (tmin) ;
+; 264.83 MHz ; 264.83 MHz      ; CLOCK_50              ;                                                ;
+; 350.39 MHz ; 315.06 MHz      ; divide5k:divide5|tick ; limit due to minimum period restriction (tmin) ;
 +------------+-----------------+-----------------------+------------------------------------------------+
 This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
 
@@ -143,19 +143,19 @@ HTML report is unavailable in plain text report export.
 +-----------------------+--------+---------------+
 ; Clock                 ; Slack  ; End Point TNS ;
 +-----------------------+--------+---------------+
-; CLOCK_50              ; -3.422 ; -140.266      ;
-; divide5k:divide5|tick ; -1.315 ; -13.113       ;
+; divide5k:divide5|tick ; -4.512 ; -71.926       ;
+; CLOCK_50              ; -3.112 ; -176.013      ;
 +-----------------------+--------+---------------+
 
 
-+-----------------------------------------------+
-; Slow 1100mV 85C Model Hold Summary            ;
-+-----------------------+-------+---------------+
-; Clock                 ; Slack ; End Point TNS ;
-+-----------------------+-------+---------------+
-; CLOCK_50              ; 0.285 ; 0.000         ;
-; divide5k:divide5|tick ; 0.721 ; 0.000         ;
-+-----------------------+-------+---------------+
++------------------------------------------------+
+; Slow 1100mV 85C Model Hold Summary             ;
++-----------------------+--------+---------------+
+; Clock                 ; Slack  ; End Point TNS ;
++-----------------------+--------+---------------+
+; CLOCK_50              ; -0.191 ; -0.495        ;
+; divide5k:divide5|tick ; 0.586  ; 0.000         ;
++-----------------------+--------+---------------+
 
 
 ------------------------------------------
@@ -175,8 +175,8 @@ No paths to report.
 +-----------------------+--------+------------------+
 ; Clock                 ; Slack  ; End Point TNS    ;
 +-----------------------+--------+------------------+
-; divide5k:divide5|tick ; -2.174 ; -40.157          ;
-; CLOCK_50              ; -0.680 ; -62.955          ;
+; divide5k:divide5|tick ; -2.174 ; -73.447          ;
+; CLOCK_50              ; -0.660 ; -75.214          ;
 +-----------------------+--------+------------------+
 
 
@@ -191,8 +191,8 @@ No synchronizer chains to report.
 +------------+-----------------+-----------------------+------------------------------------------------+
 ; Fmax       ; Restricted Fmax ; Clock Name            ; Note                                           ;
 +------------+-----------------+-----------------------+------------------------------------------------+
-; 262.4 MHz  ; 262.4 MHz       ; CLOCK_50              ;                                                ;
-; 426.08 MHz ; 315.06 MHz      ; divide5k:divide5|tick ; limit due to minimum period restriction (tmin) ;
+; 277.01 MHz ; 277.01 MHz      ; CLOCK_50              ;                                                ;
+; 339.9 MHz  ; 315.06 MHz      ; divide5k:divide5|tick ; limit due to minimum period restriction (tmin) ;
 +------------+-----------------+-----------------------+------------------------------------------------+
 This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
 
@@ -202,8 +202,8 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +-----------------------+--------+---------------+
 ; Clock                 ; Slack  ; End Point TNS ;
 +-----------------------+--------+---------------+
-; CLOCK_50              ; -3.132 ; -133.647      ;
-; divide5k:divide5|tick ; -1.347 ; -13.439       ;
+; divide5k:divide5|tick ; -4.780 ; -73.185       ;
+; CLOCK_50              ; -2.795 ; -168.937      ;
 +-----------------------+--------+---------------+
 
 
@@ -212,8 +212,8 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +-----------------------+--------+---------------+
 ; Clock                 ; Slack  ; End Point TNS ;
 +-----------------------+--------+---------------+
-; CLOCK_50              ; -0.005 ; -0.006        ;
-; divide5k:divide5|tick ; 0.751  ; 0.000         ;
+; CLOCK_50              ; -0.440 ; -2.401        ;
+; divide5k:divide5|tick ; 0.568  ; 0.000         ;
 +-----------------------+--------+---------------+
 
 
@@ -234,8 +234,8 @@ No paths to report.
 +-----------------------+--------+-----------------+
 ; Clock                 ; Slack  ; End Point TNS   ;
 +-----------------------+--------+-----------------+
-; divide5k:divide5|tick ; -2.174 ; -40.036         ;
-; CLOCK_50              ; -0.732 ; -57.594         ;
+; divide5k:divide5|tick ; -2.174 ; -73.179         ;
+; CLOCK_50              ; -0.713 ; -69.169         ;
 +-----------------------+--------+-----------------+
 
 
@@ -250,8 +250,8 @@ No synchronizer chains to report.
 +-----------------------+--------+---------------+
 ; Clock                 ; Slack  ; End Point TNS ;
 +-----------------------+--------+---------------+
-; CLOCK_50              ; -2.917 ; -68.130       ;
-; divide5k:divide5|tick ; -0.463 ; -4.603        ;
+; CLOCK_50              ; -2.726 ; -88.370       ;
+; divide5k:divide5|tick ; -1.998 ; -31.123       ;
 +-----------------------+--------+---------------+
 
 
@@ -260,8 +260,8 @@ No synchronizer chains to report.
 +-----------------------+-------+---------------+
 ; Clock                 ; Slack ; End Point TNS ;
 +-----------------------+-------+---------------+
-; CLOCK_50              ; 0.164 ; 0.000         ;
-; divide5k:divide5|tick ; 0.435 ; 0.000         ;
+; CLOCK_50              ; 0.098 ; 0.000         ;
+; divide5k:divide5|tick ; 0.313 ; 0.000         ;
 +-----------------------+-------+---------------+
 
 
@@ -282,8 +282,8 @@ No paths to report.
 +-----------------------+--------+------------------+
 ; Clock                 ; Slack  ; End Point TNS    ;
 +-----------------------+--------+------------------+
-; divide5k:divide5|tick ; -2.174 ; -40.142          ;
-; CLOCK_50              ; -0.810 ; -42.677          ;
+; divide5k:divide5|tick ; -2.174 ; -68.168          ;
+; CLOCK_50              ; -0.789 ; -51.362          ;
 +-----------------------+--------+------------------+
 
 
@@ -298,19 +298,19 @@ No synchronizer chains to report.
 +-----------------------+--------+---------------+
 ; Clock                 ; Slack  ; End Point TNS ;
 +-----------------------+--------+---------------+
-; CLOCK_50              ; -2.374 ; -55.507       ;
-; divide5k:divide5|tick ; -0.444 ; -4.419        ;
+; CLOCK_50              ; -2.207 ; -71.465       ;
+; divide5k:divide5|tick ; -1.965 ; -28.922       ;
 +-----------------------+--------+---------------+
 
 
-+-----------------------------------------------+
-; Fast 1100mV 0C Model Hold Summary             ;
-+-----------------------+-------+---------------+
-; Clock                 ; Slack ; End Point TNS ;
-+-----------------------+-------+---------------+
-; CLOCK_50              ; 0.094 ; 0.000         ;
-; divide5k:divide5|tick ; 0.429 ; 0.000         ;
-+-----------------------+-------+---------------+
++------------------------------------------------+
+; Fast 1100mV 0C Model Hold Summary              ;
++-----------------------+--------+---------------+
+; Clock                 ; Slack  ; End Point TNS ;
++-----------------------+--------+---------------+
+; CLOCK_50              ; -0.049 ; -0.158        ;
+; divide5k:divide5|tick ; 0.281  ; 0.000         ;
++-----------------------+--------+---------------+
 
 
 -----------------------------------------
@@ -330,8 +330,8 @@ No paths to report.
 +-----------------------+--------+-----------------+
 ; Clock                 ; Slack  ; End Point TNS   ;
 +-----------------------+--------+-----------------+
-; divide5k:divide5|tick ; -2.174 ; -40.068         ;
-; CLOCK_50              ; -0.840 ; -51.096         ;
+; divide5k:divide5|tick ; -2.174 ; -68.046         ;
+; CLOCK_50              ; -0.831 ; -61.157         ;
 +-----------------------+--------+-----------------+
 
 
@@ -346,12 +346,12 @@ No synchronizer chains to report.
 +------------------------+----------+--------+----------+---------+---------------------+
 ; Clock                  ; Setup    ; Hold   ; Recovery ; Removal ; Minimum Pulse Width ;
 +------------------------+----------+--------+----------+---------+---------------------+
-; Worst-case Slack       ; -3.422   ; -0.005 ; N/A      ; N/A     ; -2.174              ;
-;  CLOCK_50              ; -3.422   ; -0.005 ; N/A      ; N/A     ; -0.840              ;
-;  divide5k:divide5|tick ; -1.347   ; 0.429  ; N/A      ; N/A     ; -2.174              ;
-; Design-wide TNS        ; -153.379 ; -0.006 ; 0.0      ; 0.0     ; -103.112            ;
-;  CLOCK_50              ; -140.266 ; -0.006 ; N/A      ; N/A     ; -62.955             ;
-;  divide5k:divide5|tick ; -13.439  ; 0.000  ; N/A      ; N/A     ; -40.157             ;
+; Worst-case Slack       ; -4.780   ; -0.440 ; N/A      ; N/A     ; -2.174              ;
+;  CLOCK_50              ; -3.112   ; -0.440 ; N/A      ; N/A     ; -0.831              ;
+;  divide5k:divide5|tick ; -4.780   ; 0.281  ; N/A      ; N/A     ; -2.174              ;
+; Design-wide TNS        ; -247.939 ; -2.401 ; 0.0      ; 0.0     ; -148.661            ;
+;  CLOCK_50              ; -176.013 ; -2.401 ; N/A      ; N/A     ; -75.214             ;
+;  divide5k:divide5|tick ; -73.185  ; 0.000  ; N/A      ; N/A     ; -73.447             ;
 +------------------------+----------+--------+----------+---------+---------------------+
 
 
@@ -565,9 +565,10 @@ No synchronizer chains to report.
 +-----------------------+-----------------------+----------+----------+----------+----------+
 ; From Clock            ; To Clock              ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
 +-----------------------+-----------------------+----------+----------+----------+----------+
-; CLOCK_50              ; CLOCK_50              ; 826      ; 10       ; 30       ; 9        ;
-; divide5k:divide5|tick ; CLOCK_50              ; 15       ; 5        ; 0        ; 0        ;
-; divide5k:divide5|tick ; divide5k:divide5|tick ; 10       ; 0        ; 0        ; 0        ;
+; CLOCK_50              ; CLOCK_50              ; 849      ; 10       ; 39       ; 12       ;
+; divide5k:divide5|tick ; CLOCK_50              ; 35       ; 15       ; 0        ; 0        ;
+; CLOCK_50              ; divide5k:divide5|tick ; 55       ; 0        ; 0        ; 0        ;
+; divide5k:divide5|tick ; divide5k:divide5|tick ; 75       ; 0        ; 0        ; 0        ;
 +-----------------------+-----------------------+----------+----------+----------+----------+
 Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
 
@@ -577,9 +578,10 @@ Entries labeled "false path" only account for clock-to-clock false paths and not
 +-----------------------+-----------------------+----------+----------+----------+----------+
 ; From Clock            ; To Clock              ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
 +-----------------------+-----------------------+----------+----------+----------+----------+
-; CLOCK_50              ; CLOCK_50              ; 826      ; 10       ; 30       ; 9        ;
-; divide5k:divide5|tick ; CLOCK_50              ; 15       ; 5        ; 0        ; 0        ;
-; divide5k:divide5|tick ; divide5k:divide5|tick ; 10       ; 0        ; 0        ; 0        ;
+; CLOCK_50              ; CLOCK_50              ; 849      ; 10       ; 39       ; 12       ;
+; divide5k:divide5|tick ; CLOCK_50              ; 35       ; 15       ; 0        ; 0        ;
+; CLOCK_50              ; divide5k:divide5|tick ; 55       ; 0        ; 0        ; 0        ;
+; divide5k:divide5|tick ; divide5k:divide5|tick ; 75       ; 0        ; 0        ; 0        ;
 +-----------------------+-----------------------+----------+----------+----------+----------+
 Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
 
@@ -605,8 +607,8 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 ; Unconstrained Clocks            ; 0     ; 0    ;
 ; Unconstrained Input Ports       ; 1     ; 1    ;
 ; Unconstrained Input Port Paths  ; 1     ; 1    ;
-; Unconstrained Output Ports      ; 28    ; 28   ;
-; Unconstrained Output Port Paths ; 231   ; 231  ;
+; Unconstrained Output Ports      ; 29    ; 29   ;
+; Unconstrained Output Port Paths ; 232   ; 232  ;
 +---------------------------------+-------+------+
 
 
@@ -662,6 +664,7 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 ; HEX2[4]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; HEX2[5]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; HEX2[6]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; PWM_OUT     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 +-------------+---------------------------------------------------------------------------------------+
 
 
@@ -707,6 +710,7 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 ; HEX2[4]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; HEX2[5]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; HEX2[6]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; PWM_OUT     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 +-------------+---------------------------------------------------------------------------------------+
 
 
@@ -716,7 +720,7 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 Info: *******************************************************************
 Info: Running Quartus Prime TimeQuest Timing Analyzer
     Info: Version 16.0.0 Build 211 04/27/2016 SJ Standard Edition
-    Info: Processing started: Mon Dec 12 10:14:29 2016
+    Info: Processing started: Mon Dec 12 11:53:16 2016
 Info: Command: quartus_sta ex15 -c ex15_top
 Info: qsta_default_script.tcl version: #1
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
@@ -734,95 +738,95 @@ Info: Found TIMEQUEST_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
 Info: Analyzing Slow 1100mV 85C Model
 Critical Warning (332148): Timing requirements not met
     Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the TimeQuest Timing Analyzer.
-Info (332146): Worst-case setup slack is -3.422
+Info (332146): Worst-case setup slack is -4.512
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -3.422            -140.266 CLOCK_50 
-    Info (332119):    -1.315             -13.113 divide5k:divide5|tick 
-Info (332146): Worst-case hold slack is 0.285
+    Info (332119):    -4.512             -71.926 divide5k:divide5|tick 
+    Info (332119):    -3.112            -176.013 CLOCK_50 
+Info (332146): Worst-case hold slack is -0.191
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.285               0.000 CLOCK_50 
-    Info (332119):     0.721               0.000 divide5k:divide5|tick 
+    Info (332119):    -0.191              -0.495 CLOCK_50 
+    Info (332119):     0.586               0.000 divide5k:divide5|tick 
 Info (332140): No Recovery paths to report
 Info (332140): No Removal paths to report
 Info (332146): Worst-case minimum pulse width slack is -2.174
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -2.174             -40.157 divide5k:divide5|tick 
-    Info (332119):    -0.680             -62.955 CLOCK_50 
+    Info (332119):    -2.174             -73.447 divide5k:divide5|tick 
+    Info (332119):    -0.660             -75.214 CLOCK_50 
 Info: Analyzing Slow 1100mV 0C Model
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in TimeQuest to see clock uncertainties.
 Critical Warning (332148): Timing requirements not met
     Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the TimeQuest Timing Analyzer.
-Info (332146): Worst-case setup slack is -3.132
+Info (332146): Worst-case setup slack is -4.780
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -3.132            -133.647 CLOCK_50 
-    Info (332119):    -1.347             -13.439 divide5k:divide5|tick 
-Info (332146): Worst-case hold slack is -0.005
+    Info (332119):    -4.780             -73.185 divide5k:divide5|tick 
+    Info (332119):    -2.795            -168.937 CLOCK_50 
+Info (332146): Worst-case hold slack is -0.440
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -0.005              -0.006 CLOCK_50 
-    Info (332119):     0.751               0.000 divide5k:divide5|tick 
+    Info (332119):    -0.440              -2.401 CLOCK_50 
+    Info (332119):     0.568               0.000 divide5k:divide5|tick 
 Info (332140): No Recovery paths to report
 Info (332140): No Removal paths to report
 Info (332146): Worst-case minimum pulse width slack is -2.174
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -2.174             -40.036 divide5k:divide5|tick 
-    Info (332119):    -0.732             -57.594 CLOCK_50 
+    Info (332119):    -2.174             -73.179 divide5k:divide5|tick 
+    Info (332119):    -0.713             -69.169 CLOCK_50 
 Info: Analyzing Fast 1100mV 85C Model
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in TimeQuest to see clock uncertainties.
 Critical Warning (332148): Timing requirements not met
     Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the TimeQuest Timing Analyzer.
-Info (332146): Worst-case setup slack is -2.917
+Info (332146): Worst-case setup slack is -2.726
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -2.917             -68.130 CLOCK_50 
-    Info (332119):    -0.463              -4.603 divide5k:divide5|tick 
-Info (332146): Worst-case hold slack is 0.164
+    Info (332119):    -2.726             -88.370 CLOCK_50 
+    Info (332119):    -1.998             -31.123 divide5k:divide5|tick 
+Info (332146): Worst-case hold slack is 0.098
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.164               0.000 CLOCK_50 
-    Info (332119):     0.435               0.000 divide5k:divide5|tick 
+    Info (332119):     0.098               0.000 CLOCK_50 
+    Info (332119):     0.313               0.000 divide5k:divide5|tick 
 Info (332140): No Recovery paths to report
 Info (332140): No Removal paths to report
 Info (332146): Worst-case minimum pulse width slack is -2.174
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -2.174             -40.142 divide5k:divide5|tick 
-    Info (332119):    -0.810             -42.677 CLOCK_50 
+    Info (332119):    -2.174             -68.168 divide5k:divide5|tick 
+    Info (332119):    -0.789             -51.362 CLOCK_50 
 Info: Analyzing Fast 1100mV 0C Model
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in TimeQuest to see clock uncertainties.
 Critical Warning (332148): Timing requirements not met
     Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the TimeQuest Timing Analyzer.
-Info (332146): Worst-case setup slack is -2.374
+Info (332146): Worst-case setup slack is -2.207
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -2.374             -55.507 CLOCK_50 
-    Info (332119):    -0.444              -4.419 divide5k:divide5|tick 
-Info (332146): Worst-case hold slack is 0.094
+    Info (332119):    -2.207             -71.465 CLOCK_50 
+    Info (332119):    -1.965             -28.922 divide5k:divide5|tick 
+Info (332146): Worst-case hold slack is -0.049
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.094               0.000 CLOCK_50 
-    Info (332119):     0.429               0.000 divide5k:divide5|tick 
+    Info (332119):    -0.049              -0.158 CLOCK_50 
+    Info (332119):     0.281               0.000 divide5k:divide5|tick 
 Info (332140): No Recovery paths to report
 Info (332140): No Removal paths to report
 Info (332146): Worst-case minimum pulse width slack is -2.174
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -2.174             -40.068 divide5k:divide5|tick 
-    Info (332119):    -0.840             -51.096 CLOCK_50 
+    Info (332119):    -2.174             -68.046 divide5k:divide5|tick 
+    Info (332119):    -0.831             -61.157 CLOCK_50 
 Info (332102): Design is not fully constrained for setup requirements
 Info (332102): Design is not fully constrained for hold requirements
 Info: Quartus Prime TimeQuest Timing Analyzer was successful. 0 errors, 6 warnings
-    Info: Peak virtual memory: 1233 megabytes
-    Info: Processing ended: Mon Dec 12 10:14:35 2016
+    Info: Peak virtual memory: 1235 megabytes
+    Info: Processing ended: Mon Dec 12 11:53:22 2016
     Info: Elapsed time: 00:00:06
     Info: Total CPU time (on all processors): 00:00:06
 
