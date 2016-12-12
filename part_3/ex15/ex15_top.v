@@ -53,7 +53,7 @@ module ex15_top (CLOCK_50, SW, HEX0, HEX1, HEX2,
 	.sdata_from_adc(ADC_SDO));
 	
 	spi2dac spi(CLOCK_50, data_out, divclk, DAC_SDI, DAC_CS, DAC_SCK, DAC_LD);
-	pwm pulsewidth(CLOCK_50, divclk, data_out);
+	pwm pulsewidth(CLOCK_50, data_out, divclk, PWM_OUT);
 	
 	// outputting the decimal value to the 7-seg displays
 	const_mult mult(data_in, out_mult);

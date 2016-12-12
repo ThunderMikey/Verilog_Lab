@@ -1,10 +1,8 @@
 module hex_to_7seg (in,out);
 	
-	output [6:0] out; // low active
+	output reg[6:0] out; // low active
 	input [3:0] in; // 4-bit binary input
-	
-	reg [6:0] out; // make out a variable
-	
+		
 	always @ (*)
 		case (in)
 			4'h0: out = 7'b1000000;
