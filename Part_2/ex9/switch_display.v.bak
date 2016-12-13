@@ -1,0 +1,9 @@
+module switchdisplay(switch, time_out, HEX_in1, HEX_in2, HEX_out);
+	input switch, time_out;
+	
+	reg needle;
+	initial needle=1'b0;
+	always @ (switch) begin
+		if()
+	end
+endmodule
