@@ -1,5 +1,5 @@
-Analysis & Synthesis report for ex_10_top
-Mon Dec 12 13:41:46 2016
+Analysis & Elaboration report for ex_10_top
+Wed Dec 14 10:51:46 2016
 Quartus Prime Version 16.0.0 Build 211 04/27/2016 SJ Standard Edition
 
 
@@ -7,22 +7,12 @@ Quartus Prime Version 16.0.0 Build 211 04/27/2016 SJ Standard Edition
 ; Table of Contents ;
 ---------------------
   1. Legal Notice
-  2. Analysis & Synthesis Summary
-  3. Analysis & Synthesis Settings
-  4. Parallel Compilation
-  5. Analysis & Synthesis Source Files Read
-  6. Analysis & Synthesis Resource Usage Summary
-  7. Analysis & Synthesis Resource Utilization by Entity
-  8. State Machine - |ex10_top|spi2dac:spi|sr_state
-  9. Registers Removed During Synthesis
- 10. Removed Registers Triggering Further Register Optimizations
- 11. General Register Statistics
- 12. Multiplexer Restructuring Statistics (Restructuring Performed)
- 13. Parameter Settings for User Entity Instance: divide5k:clktick_16
- 14. Parameter Settings for User Entity Instance: spi2dac:spi
- 15. Post-Synthesis Netlist Statistics for Top Partition
- 16. Elapsed Time Per Partition
- 17. Analysis & Synthesis Messages
+  2. Analysis & Elaboration Summary
+  3. Parallel Compilation
+  4. Parameter Settings for User Entity Instance: divide5k:clktick_16
+  5. Parameter Settings for User Entity Instance: spi2dac:spi
+  6. Analysis & Elaboration Settings
+  7. Analysis & Elaboration Messages
 
 
 
@@ -46,31 +36,68 @@ agreement for further details.
 
 
 
-+-----------------------------------------------------------------------------------+
-; Analysis & Synthesis Summary                                                      ;
-+---------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Mon Dec 12 13:41:45 2016           ;
-; Quartus Prime Version           ; 16.0.0 Build 211 04/27/2016 SJ Standard Edition ;
-; Revision Name                   ; ex_10_top                                       ;
-; Top-level Entity Name           ; ex10_top                                        ;
-; Family                          ; Cyclone V                                       ;
-; Logic utilization (in ALMs)     ; N/A                                             ;
-; Total registers                 ; 45                                              ;
-; Total pins                      ; 15                                              ;
-; Total virtual pins              ; 0                                               ;
-; Total block memory bits         ; 0                                               ;
-; Total DSP Blocks                ; 0                                               ;
-; Total HSSI RX PCSs              ; 0                                               ;
-; Total HSSI PMA RX Deserializers ; 0                                               ;
-; Total HSSI TX PCSs              ; 0                                               ;
-; Total HSSI PMA TX Serializers   ; 0                                               ;
-; Total PLLs                      ; 0                                               ;
-; Total DLLs                      ; 0                                               ;
-+---------------------------------+-------------------------------------------------+
++---------------------------------------------------------------------------------+
+; Analysis & Elaboration Summary                                                  ;
++-------------------------------+-------------------------------------------------+
+; Analysis & Elaboration Status ; Successful - Wed Dec 14 10:51:46 2016           ;
+; Quartus Prime Version         ; 16.0.0 Build 211 04/27/2016 SJ Standard Edition ;
+; Revision Name                 ; ex_10_top                                       ;
+; Top-level Entity Name         ; ex10_top                                        ;
+; Family                        ; Cyclone V                                       ;
+; Logic utilization (in ALMs)   ; N/A until Partition Merge                       ;
+; Total registers               ; N/A until Partition Merge                       ;
+; Total pins                    ; N/A until Partition Merge                       ;
+; Total virtual pins            ; N/A until Partition Merge                       ;
+; Total block memory bits       ; N/A until Partition Merge                       ;
+; Total PLLs                    ; N/A until Partition Merge                       ;
+; Total DLLs                    ; N/A until Partition Merge                       ;
++-------------------------------+-------------------------------------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 8           ;
+; Maximum allowed            ; 4           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 1           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
++----------------------------+-------------+
+
+
++------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: divide5k:clktick_16 ;
++----------------+-------+-----------------------------------------+
+; Parameter Name ; Value ; Type                                    ;
++----------------+-------+-----------------------------------------+
+; N              ; 5000  ; Signed Integer                          ;
++----------------+-------+-----------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------+
+; Parameter Settings for User Entity Instance: spi2dac:spi ;
++----------------+-------+---------------------------------+
+; Parameter Name ; Value ; Type                            ;
++----------------+-------+---------------------------------+
+; BUF            ; 1     ; Unsigned Binary                 ;
+; GA_N           ; 1     ; Unsigned Binary                 ;
+; SHDN_N         ; 1     ; Unsigned Binary                 ;
+; TC             ; 11000 ; Unsigned Binary                 ;
+; IDLE           ; 00    ; Unsigned Binary                 ;
+; WAIT_CSB_FALL  ; 01    ; Unsigned Binary                 ;
+; WAIT_CSB_HIGH  ; 10    ; Unsigned Binary                 ;
++----------------+-------+---------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
 +---------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Settings                                                                                             ;
+; Analysis & Elaboration Settings                                                                                           ;
 +---------------------------------------------------------------------------------+--------------------+--------------------+
 ; Option                                                                          ; Setting            ; Default Value      ;
 +---------------------------------------------------------------------------------+--------------------+--------------------+
@@ -157,197 +184,14 @@ agreement for further details.
 +---------------------------------------------------------------------------------+--------------------+--------------------+
 
 
-+------------------------------------------+
-; Parallel Compilation                     ;
-+----------------------------+-------------+
-; Processors                 ; Number      ;
-+----------------------------+-------------+
-; Number detected on machine ; 8           ;
-; Maximum allowed            ; 4           ;
-;                            ;             ;
-; Average used               ; 1.00        ;
-; Maximum used               ; 4           ;
-;                            ;             ;
-; Usage by Processor         ; % Time Used ;
-;     Processor 1            ; 100.0%      ;
-;     Processors 2-4         ;   0.0%      ;
-+----------------------------+-------------+
-
-
-+-------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                              ;
-+----------------------------------+-----------------+------------------------------+---------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path          ; Library ;
-+----------------------------------+-----------------+------------------------------+---------------------------------------+---------+
-; spi2dac.v                        ; yes             ; User Verilog HDL File        ; C:/Verilog_Lab/part_3/ex10/spi2dac.v  ;         ;
-; ex10_top.v                       ; yes             ; User Verilog HDL File        ; C:/Verilog_Lab/part_3/ex10/ex10_top.v ;         ;
-; divide5k.v                       ; yes             ; Auto-Found Verilog HDL File  ; C:/Verilog_Lab/part_3/ex10/divide5k.v ;         ;
-+----------------------------------+-----------------+------------------------------+---------------------------------------+---------+
-
-
-+--------------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary                  ;
-+---------------------------------------------+----------------+
-; Resource                                    ; Usage          ;
-+---------------------------------------------+----------------+
-; Estimate of Logic utilization (ALMs needed) ; 29             ;
-;                                             ;                ;
-; Combinational ALUT usage for logic          ; 43             ;
-;     -- 7 input functions                    ; 0              ;
-;     -- 6 input functions                    ; 5              ;
-;     -- 5 input functions                    ; 13             ;
-;     -- 4 input functions                    ; 3              ;
-;     -- <=3 input functions                  ; 22             ;
-;                                             ;                ;
-; Dedicated logic registers                   ; 45             ;
-;                                             ;                ;
-; I/O pins                                    ; 15             ;
-;                                             ;                ;
-; Total DSP Blocks                            ; 0              ;
-;                                             ;                ;
-; Maximum fan-out node                        ; CLOCK_50~input ;
-; Maximum fan-out                             ; 26             ;
-; Total fan-out                               ; 294            ;
-; Average fan-out                             ; 2.49           ;
-+---------------------------------------------+----------------+
-
-
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                               ;
-+----------------------------+-------------------+--------------+-------------------+------------+------+--------------+-------------------------------+-------------+--------------+
-; Compilation Hierarchy Node ; LC Combinationals ; LC Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name           ; Entity Name ; Library Name ;
-+----------------------------+-------------------+--------------+-------------------+------------+------+--------------+-------------------------------+-------------+--------------+
-; |ex10_top                  ; 43 (0)            ; 45 (0)       ; 0                 ; 0          ; 15   ; 0            ; |ex10_top                     ; ex10_top    ; work         ;
-;    |divide5k:clktick_16|   ; 20 (20)           ; 17 (17)      ; 0                 ; 0          ; 0    ; 0            ; |ex10_top|divide5k:clktick_16 ; divide5k    ; work         ;
-;    |spi2dac:spi|           ; 23 (23)           ; 28 (28)      ; 0                 ; 0          ; 0    ; 0            ; |ex10_top|spi2dac:spi         ; spi2dac     ; work         ;
-+----------------------------+-------------------+--------------+-------------------+------------+------+--------------+-------------------------------+-------------+--------------+
-Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
-
-
-Encoding Type:  One-Hot
-+------------------------------------------------------------------------------------------+
-; State Machine - |ex10_top|spi2dac:spi|sr_state                                           ;
-+------------------------+---------------+------------------------+------------------------+
-; Name                   ; sr_state.IDLE ; sr_state.WAIT_CSB_HIGH ; sr_state.WAIT_CSB_FALL ;
-+------------------------+---------------+------------------------+------------------------+
-; sr_state.IDLE          ; 0             ; 0                      ; 0                      ;
-; sr_state.WAIT_CSB_FALL ; 1             ; 0                      ; 1                      ;
-; sr_state.WAIT_CSB_HIGH ; 1             ; 1                      ; 0                      ;
-+------------------------+---------------+------------------------+------------------------+
-
-
-+--------------------------------------------------------------------------------+
-; Registers Removed During Synthesis                                             ;
-+---------------------------------------+----------------------------------------+
-; Register name                         ; Reason for Removal                     ;
-+---------------------------------------+----------------------------------------+
-; spi2dac:spi|shift_reg[0,1]            ; Stuck at GND due to stuck port data_in ;
-; Total Number of Removed Registers = 2 ;                                        ;
-+---------------------------------------+----------------------------------------+
-
-
-+-----------------------------------------------------------------------------------------------+
-; Removed Registers Triggering Further Register Optimizations                                   ;
-+--------------------------+---------------------------+----------------------------------------+
-; Register name            ; Reason for Removal        ; Registers Removed due to This Register ;
-+--------------------------+---------------------------+----------------------------------------+
-; spi2dac:spi|shift_reg[0] ; Stuck at GND              ; spi2dac:spi|shift_reg[1]               ;
-;                          ; due to stuck port data_in ;                                        ;
-+--------------------------+---------------------------+----------------------------------------+
-
-
-+------------------------------------------------------+
-; General Register Statistics                          ;
-+----------------------------------------------+-------+
-; Statistic                                    ; Value ;
-+----------------------------------------------+-------+
-; Total registers                              ; 45    ;
-; Number of registers using Synchronous Clear  ; 11    ;
-; Number of registers using Synchronous Load   ; 9     ;
-; Number of registers using Asynchronous Clear ; 0     ;
-; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 0     ;
-; Number of registers using Preset             ; 0     ;
-+----------------------------------------------+-------+
-
-
-+-----------------------------------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------+
-; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output      ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------+
-; 6:1                ; 3 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; No         ; |ex10_top|spi2dac:spi|Selector0 ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------+
-
-
-+------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: divide5k:clktick_16 ;
-+----------------+-------+-----------------------------------------+
-; Parameter Name ; Value ; Type                                    ;
-+----------------+-------+-----------------------------------------+
-; N              ; 5000  ; Signed Integer                          ;
-+----------------+-------+-----------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+----------------------------------------------------------+
-; Parameter Settings for User Entity Instance: spi2dac:spi ;
-+----------------+-------+---------------------------------+
-; Parameter Name ; Value ; Type                            ;
-+----------------+-------+---------------------------------+
-; BUF            ; 1     ; Unsigned Binary                 ;
-; GA_N           ; 1     ; Unsigned Binary                 ;
-; SHDN_N         ; 1     ; Unsigned Binary                 ;
-; TC             ; 11000 ; Unsigned Binary                 ;
-; IDLE           ; 00    ; Unsigned Binary                 ;
-; WAIT_CSB_FALL  ; 01    ; Unsigned Binary                 ;
-; WAIT_CSB_HIGH  ; 10    ; Unsigned Binary                 ;
-+----------------+-------+---------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+-----------------------------------------------------+
-; Post-Synthesis Netlist Statistics for Top Partition ;
-+-----------------------+-----------------------------+
-; Type                  ; Count                       ;
-+-----------------------+-----------------------------+
-; arriav_ff             ; 45                          ;
-;     SCLR              ; 11                          ;
-;     SLD               ; 9                           ;
-;     plain             ; 25                          ;
-; arriav_lcell_comb     ; 45                          ;
-;     arith             ; 16                          ;
-;         1 data inputs ; 16                          ;
-;     normal            ; 29                          ;
-;         1 data inputs ; 2                           ;
-;         3 data inputs ; 6                           ;
-;         4 data inputs ; 3                           ;
-;         5 data inputs ; 13                          ;
-;         6 data inputs ; 5                           ;
-; boundary_port         ; 15                          ;
-;                       ;                             ;
-; Max LUT depth         ; 2.50                        ;
-; Average LUT depth     ; 1.46                        ;
-+-----------------------+-----------------------------+
-
-
-+-------------------------------+
-; Elapsed Time Per Partition    ;
-+----------------+--------------+
-; Partition Name ; Elapsed Time ;
-+----------------+--------------+
-; Top            ; 00:00:00     ;
-+----------------+--------------+
-
-
-+-------------------------------+
-; Analysis & Synthesis Messages ;
-+-------------------------------+
++---------------------------------+
+; Analysis & Elaboration Messages ;
++---------------------------------+
 Info: *******************************************************************
-Info: Running Quartus Prime Analysis & Synthesis
+Info: Running Quartus Prime Analysis & Elaboration
     Info: Version 16.0.0 Build 211 04/27/2016 SJ Standard Edition
-    Info: Processing started: Mon Dec 12 13:41:35 2016
-Info: Command: quartus_map --read_settings_files=on --write_settings_files=off ex_10 -c ex_10_top
+    Info: Processing started: Wed Dec 14 10:51:37 2016
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off ex_10 -c ex_10_top --analysis_and_elaboration
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
 Info (12021): Found 1 design units, including 1 entities, in source file spi2dac.v
@@ -360,17 +204,10 @@ Warning (12125): Using design file divide5k.v, which is not specified as a desig
 Info (12128): Elaborating entity "divide5k" for hierarchy "divide5k:clktick_16" File: C:/Verilog_Lab/part_3/ex10/ex10_top.v Line: 8
 Warning (10230): Verilog HDL assignment warning at divide5k.v(15): truncated value with size 32 to match size of target (16) File: C:/Verilog_Lab/part_3/ex10/divide5k.v Line: 15
 Info (12128): Elaborating entity "spi2dac" for hierarchy "spi2dac:spi" File: C:/Verilog_Lab/part_3/ex10/ex10_top.v Line: 9
-Info (286030): Timing-Driven Synthesis is running
-Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
-    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 68 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 11 input pins
-    Info (21059): Implemented 4 output pins
-    Info (21061): Implemented 53 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 3 warnings
-    Info: Peak virtual memory: 904 megabytes
-    Info: Processing ended: Mon Dec 12 13:41:46 2016
-    Info: Elapsed time: 00:00:11
-    Info: Total CPU time (on all processors): 00:00:22
+Info: Quartus Prime Analysis & Elaboration was successful. 0 errors, 3 warnings
+    Info: Peak virtual memory: 840 megabytes
+    Info: Processing ended: Wed Dec 14 10:51:46 2016
+    Info: Elapsed time: 00:00:09
+    Info: Total CPU time (on all processors): 00:00:20
 
 
