@@ -1,5 +1,5 @@
 Fitter report for ex15_top
-Mon Dec 12 11:53:08 2016
+Wed Dec 14 13:42:30 2016
 Quartus Prime Version 16.0.0 Build 211 04/27/2016 SJ Standard Edition
 
 
@@ -65,7 +65,7 @@ agreement for further details.
 +-----------------------------------------------------------------------------------+
 ; Fitter Summary                                                                    ;
 +---------------------------------+-------------------------------------------------+
-; Fitter Status                   ; Successful - Mon Dec 12 11:53:08 2016           ;
+; Fitter Status                   ; Successful - Wed Dec 14 13:42:30 2016           ;
 ; Quartus Prime Version           ; 16.0.0 Build 211 04/27/2016 SJ Standard Edition ;
 ; Revision Name                   ; ex15_top                                        ;
 ; Top-level Entity Name           ; ex15_top                                        ;
@@ -160,7 +160,7 @@ agreement for further details.
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   0.7%      ;
+;     Processor 2            ;   0.6%      ;
 ;     Processor 3            ;   0.6%      ;
 ;     Processor 4            ;   0.6%      ;
 +----------------------------+-------------+
@@ -2113,7 +2113,7 @@ Info (170195): Router estimated average interconnect usage is 0% of the availabl
 Info (170199): The Fitter performed an Auto Fit compilation.  Optimizations were skipped to reduce compilation time.
     Info (170201): Optimizations that may affect the design's routability were skipped
 Info (170194): Fitter routing operations ending: elapsed time is 00:00:03
-Info (11888): Total time spent on timing analysis during the Fitter is 0.48 seconds.
+Info (11888): Total time spent on timing analysis during the Fitter is 0.46 seconds.
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (334003): Started post-fitting delay annotation
@@ -2122,10 +2122,10 @@ Info (11801): Fitter post-fit operations ending: elapsed time is 00:00:03
 Warning (171167): Found invalid Fitter assignments. See the Ignored Assignments panel in the Fitter Compilation Report for more information.
 Info (144001): Generated suppressed messages file C:/Verilog_Lab/part_3/ex15/output_files/ex15_top.fit.smsg
 Info: Quartus Prime Fitter was successful. 0 errors, 45 warnings
-    Info: Peak virtual memory: 2654 megabytes
-    Info: Processing ended: Mon Dec 12 11:53:08 2016
+    Info: Peak virtual memory: 2647 megabytes
+    Info: Processing ended: Wed Dec 14 13:42:31 2016
     Info: Elapsed time: 00:00:35
-    Info: Total CPU time (on all processors): 00:01:02
+    Info: Total CPU time (on all processors): 00:01:00
 
 
 +----------------------------+
