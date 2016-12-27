@@ -1,0 +1,65 @@
+module vc_main(sysclk, data_valid, data_in, data_out);
+	input sysclk, data_valid;
+	input [9:0] data_in;
+	output [9:0] data_out;
+	wire ram_enable;
+	wire [9:0] to_atten_ram1, to_atten_ram2, to_add_1, to_add_2;
+	wire [12:0] read_addr;
+	wire [8:0] KA, KB;
+	wire [6:0] GA, GB;
+	
+	parameter ADC_OFFSET = 10'h181;
+	parameter DAC_OFFSET = 10'h200;
+	
+	assign data_in_nooffset=data_in-ADC_OFFSET;
+	
+	always @ (posedge sysclk) begin
+		data_out=data_out_nooffset+DAC_OFFSET;
+	end
+	 
+	
+	pulse_gen pulse_gen_block (
+	.pulse(ram_enable), 
+	.in(data_valid), 
+	.clk(sysclk));
+	
+	//-------------ram blocks
+	ram_2ports_wr ram1(
+	.clock(sysclk),
+	.data(data_in_nooffset),
+	.rdaddress(read_addr),
+	.rden(ram_enable),
+	.wraddress(read_addr+{4'b0, KA}),
+	.wren(ram_enable),
+	.q(to_atten_ram1));
+	
+	ram_2ports_wr ram2(
+	.clock(sysclk),
+	.data(data_in_nooffset),
+	.rdaddress(read_addr),
+	.rden(ram_enable),
+	.wraddress(read_addr+{4'b0, KB}),
+	.wren(ram_enable),
+	.q(to_atten_ram2));
+	//------------end ram blocks
+	
+	counter_13 addr_counter(
+	.clock(data_valid), 
+	.enable(1'b1), 
+	.reset(1'b0), 
+	.count(read_addr));
+	
+	vc_ccu vc_ccu_block (.data_valid(data_valid), .KA(KA), .KB(KB), .GA(GA), .GB(GB));
+	
+	always @ (posedge sysclk) begin
+		to_add_1=(to_atten_ram1*GA)[16:7];
+	end
+	always @ (posedge sysclk) begin
+		to_add_2=(to_atten_ram2*GB)[16:7];
+	end
+	always @ (posedge sysclk) begin
+		data_out_nooffset=to_add_1+to_add_2;
+	end
+	
+	
+endmodule

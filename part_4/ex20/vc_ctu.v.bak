@@ -1,0 +1,76 @@
+module vc_ctu (data_valid, KA, KB, GA, GB);
+	input data_valid;
+	output [8:0] KA, KB;
+	output [6:0] GA, GB;
+	
+	//down_counter module
+	parameter exp_ramp_grad=2;
+	reg [8:0] down_counter;
+	reg [2:0] ramp_grad;
+	initial down_counter=511, ramp_grad=0;
+	always @ (posedge data_valid) begin
+		if(ramp_grad==0) begin 
+			down_counter<=down_counter-1;
+			ramp_grad<=exp_ramp_grad-1;
+		end
+		else begin
+			ramp_grad<=ramp_grad-1;
+		end
+	end
+	//end down_counter module
+	
+	//4 state FSM
+	reg [1:0] state;
+	initial state=0;
+	always @ (posedge data_valid) begin
+		if(down_counter<=511 && down_counter>=384) begin
+			state<=3;
+		end
+		else begin
+			if(down_counter<=383 && down_counter>=256) begin
+				state<=0;
+			end
+			else begin
+				if(down_counter<=255 && down_counter>=128) begin
+					state<=1;
+				end
+				else begin	//0-127
+					state<=2;
+				end
+			end
+		end
+	end
+	
+	always @ (*) begin
+		case (state) begin
+		0:	begin
+			GA<=7'b1111111;
+			GB<=7'b0;
+			KA<=down_counter-128;
+			KB<=0;
+		end
+		1:	begin
+			GA<=down_counter[6:0];
+			GB<=(~down_counter[6:0])+1;
+			KA<=down_counter-128;
+			KB<=down_counter+128;
+		end
+		2:	begin
+			GA<=7'b0;
+			GB<=7'b1111111;
+			KA<=0;
+			KB<=down_counter+128;
+		end
+		3:	begin
+			GA<=(~down_counter[6:0])+1;
+			GB<=down_counter[6:0];
+			KA<=down_counter-128;
+			KB<=down_counter-384;
+		end
+		default:	;
+		endcase
+	end
+	
+	
+	
+endmodule
